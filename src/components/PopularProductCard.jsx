@@ -22,11 +22,11 @@ function RatingStars({ rating }) {
       const starValue = index + 1;
 
       return (
-        <div className="flex justify-center items-center w-[24px] h-[24px]">
-          <StarIcon
-            key={index}
-            color={starValue <= rating ? "#FF6452" : "#D3D3D3"}
-          />
+        <div
+          key={index}
+          className="flex justify-center items-center w-[24px] h-[24px]"
+        >
+          <StarIcon color={starValue <= rating ? "#FF6452" : "#D3D3D3"} />
         </div>
       );
     });
@@ -40,7 +40,7 @@ function PopularProductCard({ imgURL, name, price }) {
   })();
   return (
     <div className="flex flex-1 flex-col w-full max-sm:w-full">
-      <img src={imgURL} alt={name} className="w-[280px] h-[280px] " />
+      <img src={imgURL} alt={name} className="" />
       <div className="mt-8 flex justify-start gap-2.5">
         <RatingStars rating={parseFloat(rate)} />
         <p className="font-montserrat text-xl leading-normal text-slate-gray">
